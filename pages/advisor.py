@@ -6,6 +6,10 @@ from services.response_formatter import ResponseFormatter
 
 from components.page_title import page_title
 
+from services.report_generator import PDFReport
+
+import os
+
 
 advisor = AdvisorService()
 
