@@ -52,11 +52,11 @@ elif selected_page == "AI Strategy Advisor":
 
     render()
 
-elif selected_page == "Growth Assessment":
+elif selected_page=="Growth Assessment":
 
-    st.info(
-        "Coming in next step..."
-    )
+    from pages.diagnostic import render
+
+    render()
 
 elif selected_page == "Solutions":
 
