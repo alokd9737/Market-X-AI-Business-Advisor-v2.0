@@ -82,6 +82,14 @@ def render():
 
         gauge(result.score)
 
+        radar(
+
+    QUESTIONS,
+
+    scores
+
+)
+
         c1,c2,c3 = st.columns(3)
 
         with c1:
