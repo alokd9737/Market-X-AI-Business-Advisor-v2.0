@@ -33,3 +33,47 @@ def gauge(score):
 
         use_container_width=True
     )
+
+def radar(labels,values):
+
+    fig = go.Figure()
+
+    fig.add_trace(
+
+        go.Scatterpolar(
+
+            r=values,
+
+            theta=labels,
+
+            fill="toself"
+
+        )
+
+    )
+
+    fig.update_layout(
+
+        polar=dict(
+
+            radialaxis=dict(
+
+                visible=True,
+
+                range=[0,100]
+
+            )
+
+        ),
+
+        showlegend=False
+
+    )
+
+    st.plotly_chart(
+
+        fig,
+
+        use_container_width=True
+
+    )
