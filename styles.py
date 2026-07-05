@@ -159,6 +159,15 @@ border-radius:16px;
 border:1px solid #E5E7EB;
 
 }
+.card:hover{
+
+transform:translateY(-5px);
+
+transition:.25s;
+
+box-shadow:0px 18px 35px rgba(0,0,0,.12);
+
+}
 
 </style>
 
