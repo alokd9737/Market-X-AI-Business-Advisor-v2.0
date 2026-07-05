@@ -40,38 +40,42 @@ class KnowledgeBase:
 
                     self.file_names.append(file)
 
-    def search(self, query, top_k=3):
+    def search(self, query, top_k=5):
 
-        if len(self.documents) == 0:
+    if not self.documents:
+        return "", []
 
-            return "", []
+    vectorizer = TfidfVectorizer(
+        stop_words="english",
+        ngram_range=(1,3),
+        max_features=5000
+    )
 
-        vectorizer = TfidfVectorizer(
-            stop_words="english",
-            ngram_range=(1, 2)
-        )
+    vectors = vectorizer.fit_transform(
+        self.documents + [query]
+    )
 
-        vectors = vectorizer.fit_transform(
-            self.documents + [query]
-        )
+    scores = cosine_similarity(
+        vectors[-1],
+        vectors[:-1]
+    )[0]
 
-        scores = cosine_similarity(
-            vectors[-1],
-            vectors[:-1]
-        )[0]
+    ranked = scores.argsort()[::-1]
 
-        ranked = scores.argsort()[::-1]
+    context = []
 
-        selected = []
+    files = []
 
-        files = []
+    for i in ranked:
 
-        for i in ranked[:top_k]:
+        if scores[i] > 0.02:
 
-            if scores[i] > 0.03:
+            context.append(self.documents[i])
 
-                selected.append(self.documents[i])
+            files.append(self.file_names[i])
 
-                files.append(self.file_names[i])
+        if len(context) >= top_k:
 
-        return "\n\n".join(selected), files
+            break
+
+    return "\n\n".join(context), files
