@@ -106,8 +106,49 @@ with c2:
 with c3:
     st.metric("Reports", "Executive Ready")
 
-st.info(
-    "This is the initial shell of Market X AI Business Advisor v2.0. Advisor modules will be connected in the next steps."
+from components.kpi_cards import kpi_card
+
+st.markdown("## Executive Dashboard")
+
+c1,c2,c3,c4=st.columns(4)
+
+with c1:
+    kpi_card(
+        "Industries",
+        "12+"
+    )
+
+with c2:
+    kpi_card(
+        "Frameworks",
+        "25+"
+    )
+
+with c3:
+    kpi_card(
+        "Assessments",
+        "10"
+    )
+
+with c4:
+    kpi_card(
+        "AI Advisor",
+        "Ready"
+    )
+
+st.markdown("---")
+
+st.markdown(
+"""
+### Welcome to Market X AI Business Advisor
+
+Generate consulting-grade recommendations,
+assess business readiness,
+prepare executive reports,
+and identify growth opportunities.
+
+Use the navigation panel to begin.
+"""
 )
 
 render_footer()
