@@ -40,6 +40,38 @@ render_header()
 
 selected_page = render_sidebar()
 
+if selected_page == "Dashboard":
+
+    st.info(
+        "Welcome to Market X AI Business Advisor"
+    )
+
+elif selected_page == "AI Strategy Advisor":
+
+    from pages.advisor import render
+
+    render()
+
+elif selected_page == "Growth Assessment":
+
+    st.info(
+        "Coming in next step..."
+    )
+
+elif selected_page == "Solutions":
+
+    st.info(
+        "Coming soon..."
+    )
+
+elif selected_page == "Contact Market X":
+
+    st.info(
+        "Coming soon..."
+    )
+
+render_footer()
+
 # ----------------------------------------
 # HOME PAGE (Temporary)
 # ----------------------------------------
