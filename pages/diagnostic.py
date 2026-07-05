@@ -4,6 +4,8 @@ from services.readiness import ReadinessEngine
 
 from components.page_title import page_title
 
+from components.charts import gauge
+
 
 QUESTIONS = [
 
@@ -77,6 +79,8 @@ def render():
         )
 
         st.progress(result.score/100)
+
+        gauge(result.score)
 
         c1,c2,c3 = st.columns(3)
 
