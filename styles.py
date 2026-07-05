@@ -169,6 +169,18 @@ box-shadow:0px 18px 35px rgba(0,0,0,.12);
 
 }
 
+.css-1r6slb0{
+
+padding:25px;
+
+}
+
+[data-testid="stMetric"]{
+
+font-size:20px;
+
+}
+
 </style>
 
 """
