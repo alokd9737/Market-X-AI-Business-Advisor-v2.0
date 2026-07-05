@@ -86,5 +86,20 @@ CLIENT INFORMATION
 
 ----------------------------
 
-Prepare a Board-Level consulting recommendation.
+Prepare an executive consulting report.
+
+The report should resemble a management consulting deliverable.
+
+Use professional consulting language.
+
+Include tables where appropriate.
+
+Provide actionable recommendations.
+
+If data is missing,
+identify exactly what additional information is required.
+
+Think like a Partner at a top consulting firm.
+
+Never give generic AI advice.
 """
