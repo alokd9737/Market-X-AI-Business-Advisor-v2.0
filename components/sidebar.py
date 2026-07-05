@@ -11,20 +11,20 @@ def render_sidebar():
 
         selected = option_menu(
             menu_title=None,
-            options=[
-                "Home",
-                "Executive Advisor",
-                "Growth Assessment",
-                "Solutions",
-                "Consultation",
-            ],
-            icons=[
-                "house",
-                "robot",
-                "graph-up-arrow",
-                "briefcase",
-                "telephone",
-            ],
+      options=[
+    "Dashboard",
+    "AI Strategy Advisor",
+    "Growth Assessment",
+    "Solutions",
+    "Contact Market X",
+],
+ icons=[
+    "speedometer2",
+    "robot",
+    "bar-chart-line",
+    "briefcase",
+    "telephone",
+],
             default_index=0,
         )
 
