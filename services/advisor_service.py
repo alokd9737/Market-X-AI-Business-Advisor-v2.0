@@ -2,6 +2,9 @@ from services.business_analyzer import BusinessAnalyzer
 analysis = BusinessAnalyzer.analyze(question)
 from ai.knowledge import KnowledgeBase
 from ai.groq_client import GroqClient
+from components.executive_metrics import executive_metrics
+
+executive_metrics()
 
 
 class AdvisorService:
